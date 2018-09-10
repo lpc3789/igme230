@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+/* margin: auto;
+    padding: 50px;
+    border-bottom-color: #B4E2F9;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    max-width: 600px; */
+
+.header {
+    background-color: #B4E2F9;
+    padding: 50px;
+}
+
+.coursework {}
+
+/* This img section puts the picture of myself in the center of the screen, sets it's max width and height and rotates the image so it is the correct orientation. It also sets a white oval border around the image that is solid and 8px wide. I also gave the picture a top and bottom margin to space it out from the other things in the header */
+img {
+    max-width: 300px;
+    max-height: 200px;
+    margin: auto;
+    display: block;
+    align-content: center;
+    transform: rotate(90deg);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: white;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+
+/* These h1 and h2 sections center the text in each line to the middle of the screen using display, margin and text-align. These sections also set the font weight, family, color and size. */
+h1 {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Handlee', cursive;
+    color: white;
+    font-weight: 600;
+}
+
+h2 {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+h3 {}
