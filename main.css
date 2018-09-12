@@ -39,24 +39,39 @@ table {
 }
 
 td {
-    color: #7DC6C2;
     margin: auto;
+    cursor: pointer;
+    padding: 10px;
+}
+
+a {
+    color: #5FA6A6;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+a.table-links {
+    color: #7DC6C2;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 300;
-    cursor: pointer;
-    padding: 5px;
 }
-
-a.table-links {}
 
 a.anchor-links {
-    color: black;
+    color: #9DA7AA;
     cursor: auto;
-    list-style-type: none;
+    font-family: 'Handlee', cursive;
+    font-size: 30px;
 }
 
-a.exercise-links {}
+a.exercise-links {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}
 
 section.week {
     padding-top: 70px;
@@ -79,18 +94,30 @@ section.week {
     border-color: white;
     margin-bottom: 40px;
     margin-top: 20px;
-} */
+}
+*/
 
 img {
+    min-width: 60vw;
     max-width: 60vw;
     max-height: 100vh;
     transform: rotate(90deg);
     float: left;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    top: 0;
 }
+
+/*
+.left-image{
+    width: 60vw;
+    height: 100vh;
+    background-image: url(media/selfie.JPG);
+    background-size: cover;
+    background-position: center;
+    transform: rotate(90deg);
+    position: fixed;
+    margin: 0px;
+}
+*/
 
 
 /* These h1 and h2 sections center the text in each line to the middle of the screen using display, margin and text-align. These sections also set the font weight, family, color and size. */
@@ -130,14 +157,12 @@ h3.v{
     margin-top: 40px;
 }
 
-a {
-    color: #5FA6A6;
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    font-weight: 300;
+li{
+    list-style-type: none;
+}
+
+footer{
+    color: #CFF9F7;
+    height: 10px;
+    width: 100%;
 }
