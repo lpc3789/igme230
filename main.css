@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 /* margin: auto;
     padding: 50px;
     border-bottom-color: #B4E2F9;
@@ -9,15 +10,63 @@
     border-bottom-style: solid;
     max-width: 600px; */
 
-.header {
-    background-color: #B4E2F9;
-    padding: 50px;
+.container {
+    background-color: white;
+    height: 50vh;
+    width: 50vw;
+    float: right;
+    margin-left: 400px;
+    margin-top: 100px;
 }
 
-.coursework {}
+.banner {
+    background-color: #CFF9F7;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #7DC6C2;
+    padding: 40px;
+    border-right: none;
+}
+
+.weeklist {
+    margin-top: 500px;
+}
+
+table {
+    padding-top: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+td {
+    color: #7DC6C2;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 5px;
+}
+
+a.table-links {}
+
+a.anchor-links {
+    color: black;
+    cursor: auto;
+    list-style-type: none;
+}
+
+a.exercise-links {}
+
+section.week {
+    padding-top: 70px;
+}
+
 
 /* This img section puts the picture of myself in the center of the screen, sets it's max width and height and rotates the image so it is the correct orientation. It also sets a white oval border around the image that is solid and 8px wide. I also gave the picture a top and bottom margin to space it out from the other things in the header */
-img {
+
+
+/*img {
     max-width: 300px;
     max-height: 200px;
     margin: auto;
@@ -30,17 +79,29 @@ img {
     border-color: white;
     margin-bottom: 40px;
     margin-top: 20px;
+} */
+
+img {
+    max-width: 60vw;
+    max-height: 100vh;
+    transform: rotate(90deg);
+    float: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
 }
 
 
 /* These h1 and h2 sections center the text in each line to the middle of the screen using display, margin and text-align. These sections also set the font weight, family, color and size. */
+
 h1 {
     display: block;
     margin: auto;
     text-align: center;
     font-size: 45px;
     font-family: 'Handlee', cursive;
-    color: white;
+    color: #7DC6C2;
     font-weight: 600;
 }
 
@@ -50,8 +111,33 @@ h2 {
     text-align: center;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: #9DA7AA;
     font-weight: 300;
 }
 
-h3 {}
+h3 {
+    color: black;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+h3.v{
+    color: #CFF9F7;
+    font-size: 50px;
+    margin-top: 40px;
+}
+
+a {
+    color: #5FA6A6;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
