@@ -1,14 +1,11 @@
+/* Applying this to all of my css makes the height and width properties include the content as well as its padding and margins */
+
 * {
     box-sizing: border-box;
 }
 
 
-/* margin: auto;
-    padding: 50px;
-    border-bottom-color: #B4E2F9;
-    border-bottom-width: 10px;
-    border-bottom-style: solid;
-    max-width: 600px; */
+/* This sets the background image of the page and ensures it covers the whole screen with no margins */
 
 body {
     background-image: url(media/bubbles.png);
@@ -16,12 +13,19 @@ body {
     margin-right: 0px;
 }
 
-.container{
+
+/* This positions all of the body content that is not the image on the right of the screen and gives it margins and padding to space it out from other elements above and below it */
+
+.container {
     margin-top: 100px;
     float: right;
-    margin-left: 1200px;
+    padding-left: 1200px;
     margin-bottom: 150px;
+    align-content: center;
 }
+
+
+/* This colors the header banner, sets it's width and gives it a border color, width and style. It is also given padding so the text inside has some space around it */
 
 .banner {
     background-color: #CFF9F7;
@@ -30,24 +34,37 @@ body {
     border-color: #7DC6C2;
     padding: 40px;
     border-right: none;
+    border-left: none;
     width: 60vw;
 }
+
+
+/* This puts a margin above the list of weeks and exercises */
 
 .weeklist {
     margin-top: 200px;
 }
 
+
+/* This centers the table and it's text information. It is also given padding above it */
+
 table {
-    padding-top: 100px;
+    padding-top: 10px;
     margin: auto;
     text-align: center;
 }
+
+
+/* This centers the table data using auto margins, gives them padding to space them out, and ensures the cursor changes to a pointer so the user knows they are links */
 
 td {
     margin: auto;
     cursor: pointer;
     padding: 10px;
 }
+
+
+/* Centers all links and sets basic link styles, with color, no underline/text-decoration and with a pointer cursor */
 
 a {
     color: #5FA6A6;
@@ -58,6 +75,9 @@ a {
     text-align: center;
 }
 
+
+/* This targets the table-links class specifically, changing they're color, font, size and weight  */
+
 a.table-links {
     color: #7DC6C2;
     font-family: 'Roboto', sans-serif;
@@ -65,12 +85,18 @@ a.table-links {
     font-weight: 300;
 }
 
+
+/* This targets the anchor-links class specifically, changing they're color, font, size and cursor so that it is not a pointer. The anchor links from the table of contents jumps to these header links */
+
 a.anchor-links {
     color: #9DA7AA;
     cursor: auto;
     font-family: 'Handlee', cursive;
     font-size: 30px;
 }
+
+
+/* This targets the exercise-links class specifically, changing they're font, size, weight and gives them some padding to space them out from each other */
 
 a.exercise-links {
     font-family: 'Roboto', sans-serif;
@@ -80,67 +106,31 @@ a.exercise-links {
     padding-top: 10px;
 }
 
+
+/* This gives each week's section padding around it */
+
 section.week {
     padding-top: 70px;
 }
 
 
-/* This img section puts the picture of myself in the center of the screen, sets it's max width and height and rotates the image so it is the correct orientation. It also sets a white oval border around the image that is solid and 8px wide. I also gave the picture a top and bottom margin to space it out from the other things in the header */
-
-
-/*img {
-    max-width: 300px;
-    max-height: 200px;
-    margin: auto;
-    display: block;
-    align-content: center;
-    transform: rotate(90deg);
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 8px;
-    border-color: white;
-    margin-bottom: 40px;
-    margin-top: 20px;
-}
-
+/* This fixes the images position on the left of the screen so it does not move when the user scrolls, sets it's max and min heights so it shrinks when the viewport gets smaller, sets the image's width, rotates the image so it is facing the right way and gives it a border on it's left side (actually it's right side but I had to use left since the original image was upside down) with color, style and width */
 
 img {
-    min-width: 60vw;
-    max-width: 60vw;
-    max-height: 100vh;
-    transform: rotate(90deg);
-    float: left;
     position: fixed;
-}
-
-*/
-img{
     margin: auto;
     top: 0;
-    position: fixed;
     max-height: 100vh;
-    max-width: 100vw;
-    min-width: 60vh;
+    min-height: 50vh;
+    width: 40vw;
     transform: rotate(180deg);
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-left-color: #7DC6C2;
 }
 
-/*
-.left-image{
-    width: 1000px;;
-    height: 700px;
-    background-image: url(media/selfie.JPG);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotate(90deg);
-    position: fixed;
-    margin: 0px;
-    float: left;
-}*/
 
-
-
-/* These h1 and h2 sections center the text in each line to the middle of the screen using display, margin and text-align. These sections also set the font weight, family, color and size. */
+/* This h1 section centers the text in each line to the middle of the screen using display, margin and text-align. This section also sets the font weight, family, color and size. */
 
 h1 {
     display: block;
@@ -152,6 +142,9 @@ h1 {
     font-weight: 600;
 }
 
+
+/* This h1 section centers the text in each line to the middle of the screen using display, margin and text-align. This section also sets the font weight, family, color and size.  */
+
 h2 {
     display: block;
     margin: auto;
@@ -162,22 +155,34 @@ h2 {
     font-weight: 300;
 }
 
+
+/* This h3 section targets the week headers and the table of contents header. It uses left and right margins, display: block, and text-align in order to center them in the container. They are also given a font, size, and color */
+
 h3 {
-    color: black;
     display: block;
-    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    color: #9DA7AA;
+    font-family: 'Handlee', cursive;
     font-size: 30px;
 }
 
-h3.v{
+
+/* This is the V at the bottom of the screen that gives the user a cue to scroll down. It is given a font, color, size and a top margin for spacing */
+
+h3.v {
     color: #7DC6C2;
     font-size: 50px;
     margin-top: 40px;
     font-family: sans-serif;
 }
 
-li{
+
+/* This gets rid of the bullets that the unordered list items had */
+
+li {
     list-style-type: none;
 }
