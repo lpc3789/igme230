@@ -10,13 +10,18 @@
     border-bottom-style: solid;
     max-width: 600px; */
 
-.container {
+body {
     background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.container{
+    margin-left: 400px;
+    margin-top: 100px;
     height: 50vh;
     width: 50vw;
     float: right;
-    margin-left: 400px;
-    margin-top: 100px;
 }
 
 .banner {
@@ -29,7 +34,7 @@
 }
 
 .weeklist {
-    margin-top: 500px;
+    margin-top: 300px;
 }
 
 table {
@@ -95,7 +100,7 @@ section.week {
     margin-bottom: 40px;
     margin-top: 20px;
 }
-*/
+
 
 img {
     min-width: 60vw;
@@ -106,18 +111,31 @@ img {
     position: fixed;
 }
 
+*/
+img{
+    margin: auto;
+    top: 0;
+    position: fixed;
+    max-height: 100vh;
+    max-width: 100vw;
+    min-width: 60vh;
+    transform: rotate(180deg);
+}
+
 /*
 .left-image{
-    width: 60vw;
-    height: 100vh;
+    width: 1000px;;
+    height: 700px;
     background-image: url(media/selfie.JPG);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     transform: rotate(90deg);
     position: fixed;
     margin: 0px;
-}
-*/
+    float: left;
+}*/
+
 
 
 /* These h1 and h2 sections center the text in each line to the middle of the screen using display, margin and text-align. These sections also set the font weight, family, color and size. */
