@@ -11,17 +11,16 @@
     max-width: 600px; */
 
 body {
-    background-color: white;
+    background-image: url(media/bubbles.png);
     margin-left: 0px;
     margin-right: 0px;
 }
 
 .container{
-    margin-left: 400px;
     margin-top: 100px;
-    height: 50vh;
-    width: 50vw;
     float: right;
+    margin-left: 1200px;
+    margin-bottom: 150px;
 }
 
 .banner {
@@ -31,10 +30,11 @@ body {
     border-color: #7DC6C2;
     padding: 40px;
     border-right: none;
+    width: 60vw;
 }
 
 .weeklist {
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 table {
@@ -76,6 +76,8 @@ a.exercise-links {
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 300;
+    padding-right: 45px;
+    padding-top: 10px;
 }
 
 section.week {
@@ -170,17 +172,12 @@ h3 {
 }
 
 h3.v{
-    color: #CFF9F7;
+    color: #7DC6C2;
     font-size: 50px;
     margin-top: 40px;
+    font-family: sans-serif;
 }
 
 li{
     list-style-type: none;
-}
-
-footer{
-    color: #CFF9F7;
-    height: 10px;
-    width: 100%;
 }
