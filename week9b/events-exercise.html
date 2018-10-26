@@ -44,22 +44,45 @@
     </div>
 
     <script>
-        //1 - select the first p element
-        //        let paragraph = document.querySelector("p");
-        //
-        //        // 1 - assign a function expression as the value for the selected element
-        //        paragraph.onclick = function (e) {
-        //
-        //            // 2 - use the keyword 'this' to reference the object that triggered the event
-        //            this.innerHTML = "I was clicked!";
-        //
-        //            // 3 - will do the same thing
-        //            //e.target.innerHTML = "I was clicked!";
+        //Part 1
+        //created radioButtons array to house each radio button color value
+        let radioButtons = document.querySelectorAll("input");
+        let radioRed = radioButtons[0].value;
+        let radioGreen = radioButtons[1].value;
+        let radioBlue = radioButtons[2].value;
 
-        p.radio.onclick = function("info") {
-            "info".target.innerHTML = "You have selected the color" + p.value;
+        //variable info returns the p "info" because of it's "info" id
+        //puts text into the info box based on function color
+        function selectRadio(color) {
+            let info = document.getElementById("info");
+            info.innerHTML = "You have selected the color " + color;
+        }
 
-            //let olName = document.getElementByType(listElement);
+        //when clicked each button will be selected and show their various statements in the info box
+        radioButtons[0].onclick = function() {
+            selectRadio(radioRed);
+            selected = radioRed;
+        }
+        radioButtons[1].onclick = function() {
+            selectRadio(radioGreen);
+            selected = radioGreen;
+        }
+        radioButtons[2].onclick = function() {
+            selectRadio(radioBlue);
+            selected = radioBlue;
+        }
+
+        //Part 2
+        let selected;
+
+        //variable submitButton returns the element "button" from above
+        //when clicked each button will show the corresponding statement and the legend will change color according to the radio button that is currently selected
+        let submitButton = document.querySelector("button");
+        submitButton.onclick = function() {
+            let info = document.getElementById("info");
+            info.innerHTML = "Your FINAL CHOICE is " + selected;
+            let title = document.querySelector("legend");
+            title.style.color = selected;
         }
     </script>
 </body>
