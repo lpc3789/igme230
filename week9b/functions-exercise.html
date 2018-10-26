@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Week 9 Homework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+        html {
+            font-family: Lato;
+            font-size: 16px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px dotted black;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-weight: 900;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <h1>My Favorites</h1>
+        <h2>My Favorite Colors</h2>
+
+        <ol id="colorsList">
+
+        </ol>
+
+        <h2>My Favorite Foods</h2>
+
+        <ol id="foodsList">
+
+        </ol>
+
+    </main>
+
+    <script>
+        "use strict";
+        let colors = ["blue", "purple", "pink"]; // add some colors
+        let foods = ["popcorn", "steak", "potatoes"]; // add some foods
+
+        //        for (let i = 0; i < colors.length; i++) {
+        //            let olName = document.getElementById("colorsList");
+        //            let listItem = document.createElement("li");
+        //            listItem.innerHTML = colors[i]
+        //            olName.appendChild(listItem);
+        //        }
+        //
+        //        for (let j = 0; j < foods.length; j++) {
+        //            let olName = document.getElementById("foodsList");
+        //            let listItem = document.createElement("li");
+        //            listItem.innerHTML = foods[j]
+        //            olName.appendChild(listItem);
+        //        }
+
+        function createList(listElement, array) {
+            for (let x = 0; x < array.length; x++) {
+                let olName = document.getElementById(listElement);
+                let listItem = document.createElement("li");
+                listItem.innerHTML = array[x]
+                olName.appendChild(listItem);
+            }
+        }
+
+        createList("colorsList", colors);
+        createList("foodsList", foods);
+    </script>
+
+</body>
+
+</html>
