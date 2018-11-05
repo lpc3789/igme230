@@ -5,7 +5,3 @@ body {
 .print {
     visibility: visible;
 }
-
-@page {
-    size: 8.5in 11in;
-}

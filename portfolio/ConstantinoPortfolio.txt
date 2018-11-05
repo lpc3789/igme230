@@ -1,0 +1,15 @@
+Lindsay Constantino
+Project 2 - Portfolio Page
+IGME.230.02
+
+All images used are my own. I used Roboto and Satisfy as my fonts which were both linked from fonts.google.com. 
+
+Compared to my initial design document, my design changed a bit over time while coding but still has the same content elements and goals. I wanted to make a responsive, easy to use and access website which I have achieved.
+
+I wanted my website to have a good amount of my work so I added 6 individual pages, the Graphic Design and 3D Renders pages even had multiple works in them. Also the requirements specified a separate Contact page but I just combined it with my About page.
+
+One challenge I was faced with while creating this portfolio site was becoming more familiar with flexbox. I had to do a lot of research into flexbox to figure out how best to get it to work on my site. For all my coding help I mostly used w3schools or stackoverflow to help me with basic concepts I would draw on later. I also used http://flexbox.buildwithreact.com/ this website to help me with my flexbox layout.
+
+A second problem I had to face was figuring out how to make my resume page printable. In order to do this I used https://www.thoughtco.com/how-to-add-a-print-button-4072006 this website to help me see how to go about making a print button on my resume page.
+
+Another challenge I had to face when creating this page was using media queries and making the website responsive. Originally I had coded the website desktop-first which made it really difficult to add media queries for smaller screen sizes. Because of this I actually spent the time to take my css stylesheet and reoraganize it in another stylesheet so that my site would be mobile-first with the media queries for the larger screen sizes. It took a lot of time to revisualize my project and how I built it but the result was worth it. My website is now much more responsive and changes screens smoothly.

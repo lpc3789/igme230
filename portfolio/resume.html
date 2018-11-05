@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link href="portfolio.css" rel="stylesheet">
+    <link href="portfolioPage.css" rel="stylesheet">
     <link href="print.css" rel="stylesheet" type="text/css" media="print">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Satisfy" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,9 +18,11 @@
             <h1>Lindsay Constantino</h1>
             <h2>UI/UX DESIGNER</h2>
             <nav>
-                <a href="index.html">PORTFOLIO</a>
-                <a class="active" href="resume.html">RESUME</a>
-                <a href="about.html">ABOUT/CONTACT</a>
+                <ul>
+                    <li class="menu"><a href="index.html">PORTFOLIO</a></li>
+                    <li class="menu"><a class="active" href="resume.html">RESUME</a></li>
+                    <li class="menu"><a href="about.html">ABOUT/CONTACT</a></li>
+                </ul>
             </nav>
             <img class="arrow" src="arrow.png">
         </div>
@@ -28,58 +30,54 @@
     <h1 class="title">Resume</h1>
     <div class="printPage" onclick="window.print();return false;">PRINT THIS PAGE</div>
     <div class="print">
-        <div class="resumeRow">
-            <div class="resumeLeft">
-                <h2 class="resume">Lindsay Constantino</h2>
-                <h3 class="resume">UI/UX DESIGNER</h3>
-                <h4 class="resume">lpc3789@g.rit.edu</h4>
-                <h4 class="resume">(716)534-6905</h4>
-                <h2 class="resume">EXPERIENCE</h2>
-                <h3 class="resume">WITR 89.7</h3>
-                <h4 class="resume">Assistant Events Coordinator</h4>
-                <p class="resume">April 2018 - Present</p>
-                <p class="resume">Assists Events Coordinator with setting up, tearing down, and running various events on campus for the RIT radio station.</p>
-                <h3 class="resume">SB Marketing LLC</h3>
-                <h4 class="resume">Visual Communications Intern</h4>
-                <p class="resume">June - August 2018</p>
-                <p class="resume">Utilized various skills in graphic design and interaction design to create multiple websites and run several different social media campaigns for various clients.</p>
-                <h3 class="resume">Catholic Charities WIC</h3>
-                <h4 class="resume">Public Relations Assistant</h4>
-                <p class="resume">March 2017</p>
-                <p class="resume">Assisted with creation of Public Relations materials for WIC's Healthy Baby Festivals.</p>
-            </div>
+        <div class="resumePage">
+            <h2 class="resume">Lindsay Constantino</h2>
+            <h3 class="resume">UI/UX DESIGNER</h3>
+            <h4 class="resume">lpc3789@g.rit.edu</h4>
+            <h4 class="resume">(716)534-6905</h4>
+            <h2 class="resume">EXPERIENCE</h2>
+            <h3 class="resume">WITR 89.7</h3>
+            <h4 class="resume">Assistant Events Coordinator</h4>
+            <p class="resume">April 2018 - Present</p>
+            <p class="resume">Assists Events Coordinator with setting up, tearing down, and running various events on campus for the RIT radio station.</p>
+            <h3 class="resume">SB Marketing LLC</h3>
+            <h4 class="resume">Visual Communications Intern</h4>
+            <p class="resume">June - August 2018</p>
+            <p class="resume">Utilized various skills in graphic design and interaction design to create multiple websites and run several different social media campaigns for various clients.</p>
+            <h3 class="resume">Catholic Charities WIC</h3>
+            <h4 class="resume">Public Relations Assistant</h4>
+            <p class="resume">March 2017</p>
+            <p class="resume">Assisted with creation of Public Relations materials for WIC's Healthy Baby Festivals.</p>
 
-            <div class="resumeRight">
-                <h2 class="resume">EDUCATION</h2>
-                <h3 class="resume">Rochester Institute of Technology</h3>
-                <p class="resume">Major: New Media Design BFA, 2016 - 2020</p>
-                <p class="resume">Minor: Psychology</p>
-                <p class="resume">Cumulative GPA: 3.7</p>
-                <p class="resume">Dean’s List: Fall 2016 - Spring 2018</p>
-                <h3 class="resume">Buffalo Academy of the Sacred Heart</h3>
-                <p class="resume">High School, 2012-2016</p>
-                <p class="resume">National Honor Society</p>
-                <h2 class="resume">SKILLS</h2>
-                <h3 class="resume">Adobe Products</h3>
-                <ul>
-                    <li>Illustrator</li>
-                    <li>Photoshop</li>
-                    <li>Premiere</li>
-                    <li>After Effects</li>
-                    <li>XD</li>
-                </ul>
-                <h3 class="resume">Other Software</h3>
-                <ul>
-                    <li>Cinema 4D</li>
-                    <li>Blender</li>
-                    <li>Wordpress</li>
-                </ul>
-                <h3 class="resume">Computer Languages</h3>
-                <ul>
-                    <li>HTML/CSS</li>
-                    <li>Javascript and p5.js</li>
-                </ul>
-            </div>
+            <h2 class="resume">EDUCATION</h2>
+            <h3 class="resume">Rochester Institute of Technology</h3>
+            <p class="resume">Major: New Media Design BFA, 2016 - 2020</p>
+            <p class="resume">Minor: Psychology</p>
+            <p class="resume">Cumulative GPA: 3.7</p>
+            <p class="resume">Dean’s List: Fall 2016 - Spring 2018</p>
+            <h3 class="resume">Buffalo Academy of the Sacred Heart</h3>
+            <p class="resume">High School, 2012-2016</p>
+            <p class="resume">National Honor Society</p>
+            <h2 class="resume">SKILLS</h2>
+            <h3 class="resume">Adobe Products</h3>
+            <ul>
+                <li>Illustrator</li>
+                <li>Photoshop</li>
+                <li>Premiere</li>
+                <li>After Effects</li>
+                <li>XD</li>
+            </ul>
+            <h3 class="resume">Other Software</h3>
+            <ul>
+                <li>Cinema 4D</li>
+                <li>Blender</li>
+                <li>Wordpress</li>
+            </ul>
+            <h3 class="resume">Computer Languages</h3>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>Javascript and p5.js</li>
+            </ul>
         </div>
     </div>
 </body>

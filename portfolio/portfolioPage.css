@@ -1,0 +1,482 @@
+/* Applying this to all of my css makes the height and width properties include the content as well as its padding and margins */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* All contents in the body will have 0 margins by deafult */
+
+body {
+    margin: 0;
+}
+
+
+/* This section refers to the main heading that is present on every page. The header is the pink background which is the viewport height and width. There is also a logo and div heading of words and links that are floated next to each other in this header. Everything is given color and font-styles and I made sure it all fits together on the page. The links are also given a hover color and there is an arrow under the navigation that shows the user they can scroll down the page */
+
+header {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    background-color: #FFB3D2;
+}
+
+img.logo {
+    width: 50%;
+    height: auto;
+    margin-top: 30%;
+    margin-left: 25%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.heading {
+    margin-top: 30px;
+    margin-right: 0;
+}
+
+h1 {
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 38px;
+    font-family: 'Satisfy', cursive;
+}
+
+h2 {
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+nav {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+a.active {
+    color: #D6186E;
+}
+
+a:hover:not(.active) {
+    color: #BC0E66;
+}
+
+img.arrow {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .5;
+}
+
+li.menu {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+
+/* This section refers to the portfolio/gallery aspect of the page. Everything is given height and width in proportion to the viewport size. The individual works are placed using flex-box so the rows wrap when the viewport gets smaller. They are centered on the page with auto margins and given an overlay when the user hovers on them with their cursor which turns them pink and shows the title of the work shown. In order to link the images to separate pages with the work and a summary of my process, I created a block link that covers the entire image */
+
+.gallery {
+    width: 100vw;
+    height: 270vh;
+}
+
+.work {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #FFB3D2;
+    border-radius: 5px;
+}
+
+.work:hover .overlay {
+    opacity: 0;
+}
+
+h1.title {
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #D6186E;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+.worksContainer {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a.pageLinks {
+    display: block;
+    padding-right: 0;
+}
+
+
+/* This section refers to the individual work pages that have my work and sumamries of my process. Styles are set for all text on the page as well as pagePhoto images that will be at the top of every page. Everything is centered on the screen with auto margins and margins in between everything to space it out. I also added a video element for my two pages that have videos. They have the same dimensions as the pagePhoto images and doesnt require video plugins like Flash. The about/contact page also follows these rules  */
+
+h3 {
+    margin: auto;
+    margin-top: 185px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+h4 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 60px;
+}
+
+h5 {
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 0;
+    margin-bottom: 70px;
+    line-height: 25px;
+}
+
+img.aboutPhoto {
+    width: 90vw;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+img.pagePhoto {
+    width: 90vw;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+video {
+    width: 90vw;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+/* This section pertains to the resume page. Information is set in two columns that are next to each other and use floats and a table to make the columns wrap and stack on top of each other. All text is given certain colors, size and styles. I alos added a link at the top of the page that allows the user to print my resume. The link will open up their print settings by linking to a separate stylesheet called print.css that sets the page dimensions and distinguishes what to print using a print class */
+
+.resumePage {
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2.resume {
+    color: #88AFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-top: 25px;
+    text-align: left;
+    font-weight: 500;
+}
+
+h3.resume {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    margin: 0;
+    margin-top: 15px;
+}
+
+h4.resume {
+    margin: 0;
+    text-align: left;
+    color: #7C7C7C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p.resume {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul {
+    display: block;
+    padding-left: 0;
+}
+
+.printPage {
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.printPage:hover {
+    color: #BC0E66;
+}
+
+
+/* These are all media queries so everything is responsive and changes smoothly on the page when the window is made smaller or larger */
+
+
+/* These media queries is specialized for mobile. All I changed in these queries are the margins for the heading elements */
+
+@media (min-width: 500px) {
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img.arrow {
+        margin-left: 45%;
+        margin-top: 25px;
+    }
+    img.logo {
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 700px) {
+    img.logo {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+    img.arrow {
+        margin-left: 45%;
+        margin-top: 25px;
+    }
+}
+
+
+/* These media queries is specialized for desktop */
+
+@media (min-width: 900px) {
+    /* This media query adjusts the size of the logo and header text using floats and makes the nav links horizontal instead of vertical using display: inline. Various widths and heights of the gallery works are changed so they are in proportion and now in two columns instead of 1 due to them being in a flex-box with flex-wrap: row wrap */
+    img.logo {
+        width: 35%;
+        margin-left: 10%;
+        margin-top: 15%;
+        float: left;
+    }
+    .heading {
+        float: right;
+        margin-top: 25%;
+        margin-right: 10%;
+    }
+    h1 {
+        font-size: 42px;
+        text-align: left;
+    }
+    h2 {
+        font-size: 22px;
+        text-align: left;
+    }
+    img.arrow {
+        width: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: .5;
+        margin-top: 70px;
+    }
+    a {
+        font-size: 18px;
+    }
+    li.menu {
+        text-align: left;
+        padding: 0;
+        padding-right: 15px;
+        display: inline;
+    }
+    .gallery {
+        height: 150vh;
+    }
+    .worksContainer {
+        width: 95vw;
+    }
+    .work {
+        width: 45vw;
+    }
+    img.image {
+        height: 300px;
+    }
+    /* The indiviual works pages are adjusted by having their titles given a larger font size and summary text is given different margins so they are not on the edge of the page. The resume page is given a smaller width› */
+    h4 {
+        font-size: 60px;
+    }
+    h5 {
+        margin-left: 80px;
+    }
+    p {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .resumePage {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 1150px) {
+    /* This media query adjusts the size of the logo and header text as well as the arrow symbol in the header. The portfolio elements are also adjusted such as the gallery height and the width of the work elements */
+    img.logo {
+        width: 30%;
+        margin-left: 10%;
+        margin-top: 15%;
+        float: left;
+    }
+    .heading {
+        float: right;
+        margin-top: 23%;
+        margin-right: 25%;
+    }
+    img.arrow {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+    li.menu {
+        display: inline;
+    }
+    .gallery {
+        height: 200vh;
+    }
+    .worksContainer {
+        width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .work {
+        width: 40vw;
+    }
+    img.image {
+        height: 400px;
+    }
+    /* The indiviual works pages are adjusted by having the summary text given different margins so they are not on the edge of the page. The resume page is given a smaller width */
+    h5 {
+        margin-left: 150px;
+    }
+    p {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .resumePage {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 1250px) {
+    /* This media query adjusts things similarly to the previous media query, just slightly different for a lerger screen */
+    img.logo {
+        width: 30%;
+        margin-left: 10%;
+        margin-top: 10%;
+        float: left;
+    }
+    .heading {
+        float: right;
+        margin-top: 20%;
+        margin-right: 30%;
+    }
+    li.menu {
+        display: inline;
+    }
+    .gallery {
+        height: 200vh;
+    }
+    .worksContainer {
+        width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .work {
+        width: 45vw;
+    }
+    img.image {
+        height: 450px;
+    }
+    /* The indiviual works pages are adjusted by having the summary text given different margins so they are not on the edge of the page. The resume page is given a smaller width */
+    h5 {
+        margin-left: 250px;
+    }
+    p {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    .resumePage {
+        width: 50vw;
+    }
+}
