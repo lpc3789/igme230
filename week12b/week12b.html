@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Side Slide Animate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: darksalmon;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #box {
+            background-color: white;
+            width: 700px;
+            height: 400px;
+            z-index: 1;
+            padding: 15px;
+        }
+
+        #openClose {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        #toggleBar {
+            height: 40px;
+            width: 150px;
+            text-align: center;
+            background-color: bisque;
+            border: 1px solid;
+            border-color: brown;
+            border-width: 2px;
+            z-index: 3;
+            padding: 10px;
+        }
+
+        #toggleBox {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            background-color: white;
+            border: 1px solid;
+            border-color: brown;
+            padding: 18px;
+            z-index: 2;
+            margin-top: 25px;
+        }
+
+        #box2 {
+            background-color: white;
+            width: 700px;
+            height: 400px;
+            z-index: 1;
+            padding: 15px;
+        }
+
+        #image1 {
+            background-image: url(cat.jpg);
+            background-size: cover;
+            width: 500px;
+            height: 350px;
+            position: absolute;
+        }
+
+        #image2 {
+            background-image: url(cat2.jpg);
+            background-size: cover;
+            width: 500px;
+            height: 350px;
+            position: absolute;
+        }
+
+        a.second{
+            margin-left: 545px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="page1">
+        <div id="box">
+            <div id="image1"></div>
+            <div id="openClose">
+                <div id="toggleBar">Click Me!</div>
+                <div id="toggleBox">
+                    <p>Hello! Welcome to my Week12b Exercise using jQuery.</p>
+                    <a href="#page2">Go to Next Page</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrapper" id="page2">
+        <div id="box2">
+            <div id="image2"></div>
+            <a class="second" href="#page1">Go to Last Page</a>
+        </div>
+    </div>
+    <script>
+        $("a[href^='#']").click(function(event) {
+            event.preventDefault();
+            let target = $(this.hash);
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 400);
+        });
+
+        $("#toggleBar").click(function() {
+            $("#toggleBox").slideToggle(400);
+        });
+    </script>
+</body>
+</html>
