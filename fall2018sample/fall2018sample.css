@@ -1,0 +1,170 @@
+/*********************************
+General Formatting (Do Not Change)
+*********************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: #86af49;
+}
+
+nav,
+aside,
+article {
+    padding: .5rem;
+}
+
+nav,
+aside {
+    background-color: #b5e7a0;
+}
+
+
+/**************
+Your Formatting
+***************/
+
+
+/*
+#wrapper {
+    width: 100vw;
+    display: grid;
+    grid-auto-rows: 100vw;
+    grid-template-columns: 1;
+}
+
+header {
+    display: flex;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    grid-row: 2;
+}
+
+article {
+    grid-row: 3;
+}
+
+aside {
+    grid-row: 4;
+}
+
+footer {
+    display: flex;
+    grid-row: 5;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem {
+    background-color: white;
+    margin: 0;
+    border-top: solid white 1px;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding-left: .25rem;
+    background-color: gainsboro;
+}
+*/
+
+#wrapper {
+    display: grid;
+    margin: auto;
+    width: 90vw;
+    max-width: 1200px;
+    min-height: 100vh;
+    grid-template-areas: "header header header" "nav article aside" "footer footer footer";
+    grid-template-rows: 4rem auto 3rem;
+    grid-template-columns: 1fr 2fr 200px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem {
+    background-color: white;
+    margin: 0;
+    border-top: solid white 1px;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding-left: .25rem;
+    background-color: gainsboro;
+}
+
+@media (max-width: 750px) {
+    #wrapper {
+        width: 100vw;
+        grid-template-areas: "header" "nav" "article" "aside" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    header {
+        grid-row: 1;
+    }
+    nav {
+        grid-row: 2;
+    }
+    article {
+        grid-row: 3;
+    }
+    aside {
+        grid-row: 4;
+    }
+    footer {
+        grid-row: 5;
+    }
+}
