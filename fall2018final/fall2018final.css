@@ -1,0 +1,131 @@
+/*****************
+General Formatting
+******************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+article,
+aside {
+    padding: .5rem;
+}
+
+#extracredit {
+    width: 75%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid darkgreen;
+}
+
+
+/**************
+Your Formatting
+***************/
+
+#yourgrid {
+    display: grid;
+    margin: auto;
+    width: 90vw;
+    max-width: 1000px;
+    min-height: 100vh;
+    grid-template-areas: "header header" "article nav" "article aside" "footer footer";
+    grid-template-rows: 75px 30px auto 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+header {
+    grid-area: header;
+    background-color: lightpink;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: lavenderblush;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+article {
+    grid-area: article;
+    background-color: lightcyan;
+}
+
+aside {
+    grid-area: aside;
+    background-color: lightblue;
+    z-index: 1;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightpink;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.menu {
+    margin: auto;
+    margin-top: 6px;
+    width: 6rem;
+    background-color: #ccc;
+    text-align: center;
+    z-index: 4;
+    justify-content: space-around;
+}
+
+ul.items {
+    display: none; /*hidden on load*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+    z-index: 3;
+}
+
+li {
+    padding-left: .25rem;
+    background-color: #ddd;
+}
+
+@media (max-width: 750px) { /*mobile media query*/
+    #yourgrid {
+        width: 100vw;
+        grid-template-areas: "header" "nav" "article" "aside" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 30px auto auto 30px;
+    }
+    header {
+        grid-row: 1;
+    }
+    nav {
+        grid-row: 2;
+    }
+    article {
+        grid-row: 3;
+    }
+    aside {
+        grid-row: 4;
+    }
+    footer {
+        grid-row: 5;
+    }
+}
