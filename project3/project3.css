@@ -7,12 +7,12 @@
     margin: auto;
     width: 90vw;
     max-width: 1200px;
-    min-height: 90vh;
+    height: 90vh;
     grid-template-areas: "header header header header header homepage"
                          "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect"
                          "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect"
                          "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect"
-                         "leftPanel leftPanel leftPanel sectionSelect colorSlider colorSlider";
+                         "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect";
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -49,22 +49,19 @@ header {
     grid-area: clothingSelect;
     background-color: lightpink;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: center;
-}
-
-#colorSlider {
-    grid-area: colorSlider;
-    background-color: hotpink;
+    flex-flow: row wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
 }
 
 .clothingBoxes {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: white;
-    margin: 20px;
     border-radius: 10px;
+    margin: 15px;
 }
 
 .sectionCircles {
@@ -100,8 +97,28 @@ h2 {
 }
 
 
-@media (max-width: 568px){
-
+@media (max-width: 750px) { /*mobile media query*/
+    #wrapper {
+        width: 100vw;
+        grid-template-areas: "header" "homepage" "leftPanel" "sectionSelect" "clothingSelect";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    header {
+        grid-row: 1;
+    }
+    #homepage {
+        grid-row: 2;
+    }
+    #leftPanel{
+        grid-row: 3;
+    }
+    #sectionSelect {
+        grid-row: 4;
+    }
+    #clothingSelect {
+        grid-row: 5;
+    }
 }
 
 
