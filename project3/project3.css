@@ -30,12 +30,15 @@ header {
 
 #leftPanel {
     grid-area: leftPanel;
-    background-color: deepskyblue;
+    background-color: lightpink;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #sectionSelect {
     grid-area: sectionSelect;
-    background-color: coral;
+    background-color: palevioletred;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -44,29 +47,29 @@ header {
 
 #clothingSelect {
     grid-area: clothingSelect;
-    background-color: crimson;
+    background-color: lightpink;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: space-between;
     justify-content: center;
 }
 
 #colorSlider {
     grid-area: colorSlider;
-    background-color: darkorchid;
+    background-color: hotpink;
 }
 
 .clothingBoxes {
     width: 150px;
     height: 150px;
-    background-color: forestgreen;
+    background-color: white;
     margin: 20px;
+    border-radius: 10px;
 }
 
 .sectionCircles {
-    width: 75px;
-    height: 75px;
-    background-color: white;
+    width: 125px;
+    height: 125px;
     margin: 15px;
 }
 
@@ -89,6 +92,11 @@ h2 {
     font-size: 14px;
     text-align: center;
     margin-top: 30%;
+}
+
+.character {
+    height: 500px;
+    width: auto;
 }
 
 

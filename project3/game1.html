@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<script src="pixi.min.js"></script>
     <div id="wrapper">
         <header>
             <h1>Dress-Up Game 1</h1>
@@ -22,20 +23,29 @@
                 </div>
             </a>
         </div>
-        <div id="leftPanel"></div>
+        <div id="leftPanel">
+            <img class="character" src="media/bear.png">
+        </div>
         <div id="sectionSelect">
-            <div class="sectionCircles"></div>
-            <div class="sectionCircles"></div>
-            <div class="sectionCircles"></div>
+            <img class="sectionCircles" src="media/hatIcon.svg">
+            <img class="sectionCircles" src="media/shirtIcon.svg">
+            <img class="sectionCircles" src="media/pantsIcon.svg">
         </div>
         <div id="clothingSelect">
-            <div class="clothingBoxes"></div>
-            <div class="clothingBoxes"></div>
-            <div class="clothingBoxes"></div>
-            <div class="clothingBoxes"></div>
+            <div class="clothingBoxes">
+                <img class="clothing" src="media/pinkShirt.svg">
+            </div>
+            <div class="clothingBoxes">
+                <img class="clothing" src="media/blueShirt.svg">
+            </div>
+            <div class="clothingBoxes">
+                <img class="clothing" src="media/purpleShirt.svg">
+            </div>
+            <div class="clothingBoxes">
+                <img class="clothing" src="media/redShirt.svg">
+            </div>
         </div>
         <div id="colorSlider"></div>
     </div>
 </body>
-
 </html>
