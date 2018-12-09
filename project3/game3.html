@@ -22,38 +22,30 @@
                 </div>
             </a>
         </div>
-        <div id="leftPanel">
-            <img class="character" src="media/bear.png">
-        </div>
-        <div id="sectionSelect">
-            <img class="sectionCircles" id="defaultOpen" src="media/hatIcon.svg" onclick="openTab(event, 'hats')">
-            <img class="sectionCircles" src="media/shirtIcon.svg" onclick="openTab(event, 'shirts')">
-            <img class="sectionCircles" src="media/pantsIcon.svg" onclick="openTab(event, 'pants')">
-        </div>
         <div id="clothingSelect">
             <div id="shirts" class="tabcontent">
                 <div class="clothingBoxes">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><style>.cls-1{fill:#ffecf0;}.cls-2{fill:#fff;}.cls-3{fill:#f2d5dd;}</style></defs><title>pinkShirt</title><g class="draggable" id="Pink_Shirt" data-name="Pink Shirt"><path class="cls-1" d="M373.67,162.94s-37.36-69-108.52-77.28h0l-32.67,56.67,58.41,80.21S362.12,206.81,373.67,162.94Z"/><path class="cls-2" d="M375.24,163l-7.74-9.52S336.09,204.07,280.28,206l10.61,16.59S362.24,206.54,375.24,163Z"/><path class="cls-1" d="M23.69,161.45s40.63-67.16,112.11-72h0l29.91,58.17L103.51,225S33.11,205.81,23.69,161.45Z"/><path class="cls-2" d="M22.12,161.39l8.19-9.14s28.93,52.08,84.59,56.64L103.51,225S33,205.55,22.12,161.39Z"/><path class="cls-1" d="M313.8,175.92S335,245.3,313.85,293s-205.17,48.6-232.61,4.09c0,0-10.7-9.56-7-82.18"/><path class="cls-1" d="M79.52,175.23s-21.17,69.37-.09,117S284.59,341,312,296.46c0,0,10.71-9.56,7-82.18,0,0,17.84-120.74-50.92-126.15L136,89"/><path class="cls-3" d="M81.24,297.07s-21.3-28.17-1.62-108.41c0,0-4.73,108.12,23.15,112.48Z"/><path class="cls-3" d="M313.8,175.92S334.87,243,313.85,293l-13.44,5.61s19.88-49.72,9.95-121.78Z"/><path class="cls-2" d="M186,110.15s.66,134.54-13.29,217.62c0,0,14.13,1.08,23.41,1.23,0,0,7.11-186.45,5.86-218.85A37.23,37.23,0,0,1,186,110.15Z"/><circle class="cls-3" cx="194.22" cy="128.61" r="6.26"/><circle class="cls-3" cx="193.32" cy="152.89" r="6.26"/><circle class="cls-3" cx="192.83" cy="178.23" r="6.26"/><circle class="cls-3" cx="191.49" cy="203" r="6.26"/><circle class="cls-3" cx="190.36" cy="230.32" r="6.26"/><circle class="cls-3" cx="189.82" cy="257.65" r="6.26"/><circle class="cls-3" cx="186.55" cy="286.41" r="6.26"/><path class="cls-3" d="M317.31,188.7S311,161.6,305.72,154c0,0,4.5,16,6.7,42.77S317.31,188.7,317.31,188.7Z"/><path class="cls-3" d="M125.23,88.75s65.52,53.48,141.75,0Z"/><circle class="cls-3" cx="185.55" cy="312.41" r="6.26"/></g></svg>
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="50 300 2500 2000" width="1100" height="1100"><defs><style>.cls-1{fill:#ffecf0;}.cls-2{fill:#fff;}.cls-3{fill:#f2d5dd;}</style></defs><title>pinkShirt</title><g class="draggable" id="Pink_Shirt" data-name="Pink Shirt"><path class="cls-1" d="M373.67,162.94s-37.36-69-108.52-77.28h0l-32.67,56.67,58.41,80.21S362.12,206.81,373.67,162.94Z"/><path class="cls-2" d="M375.24,163l-7.74-9.52S336.09,204.07,280.28,206l10.61,16.59S362.24,206.54,375.24,163Z"/><path class="cls-1" d="M23.69,161.45s40.63-67.16,112.11-72h0l29.91,58.17L103.51,225S33.11,205.81,23.69,161.45Z"/><path class="cls-2" d="M22.12,161.39l8.19-9.14s28.93,52.08,84.59,56.64L103.51,225S33,205.55,22.12,161.39Z"/><path class="cls-1" d="M313.8,175.92S335,245.3,313.85,293s-205.17,48.6-232.61,4.09c0,0-10.7-9.56-7-82.18"/><path class="cls-1" d="M79.52,175.23s-21.17,69.37-.09,117S284.59,341,312,296.46c0,0,10.71-9.56,7-82.18,0,0,17.84-120.74-50.92-126.15L136,89"/><path class="cls-3" d="M81.24,297.07s-21.3-28.17-1.62-108.41c0,0-4.73,108.12,23.15,112.48Z"/><path class="cls-3" d="M313.8,175.92S334.87,243,313.85,293l-13.44,5.61s19.88-49.72,9.95-121.78Z"/><path class="cls-2" d="M186,110.15s.66,134.54-13.29,217.62c0,0,14.13,1.08,23.41,1.23,0,0,7.11-186.45,5.86-218.85A37.23,37.23,0,0,1,186,110.15Z"/><circle class="cls-3" cx="194.22" cy="128.61" r="6.26"/><circle class="cls-3" cx="193.32" cy="152.89" r="6.26"/><circle class="cls-3" cx="192.83" cy="178.23" r="6.26"/><circle class="cls-3" cx="191.49" cy="203" r="6.26"/><circle class="cls-3" cx="190.36" cy="230.32" r="6.26"/><circle class="cls-3" cx="189.82" cy="257.65" r="6.26"/><circle class="cls-3" cx="186.55" cy="286.41" r="6.26"/><path class="cls-3" d="M317.31,188.7S311,161.6,305.72,154c0,0,4.5,16,6.7,42.77S317.31,188.7,317.31,188.7Z"/><path class="cls-3" d="M125.23,88.75s65.52,53.48,141.75,0Z"/><circle class="cls-3" cx="185.55" cy="312.41" r="6.26"/></g></svg>
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/blueShirt.svg">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="50 300 2500 2000" width="1100" height="1100"><defs><style>.cls-1{fill:#8bd1ff;}.cls-2{fill:#b9e6ff;}.cls-3{fill:#60c6f5;}</style></defs><title>blueShirt</title><g id="Shirt_and_Tie" data-name="Shirt and Tie"><path class="cls-1" d="M83.62,166.6s-21,68.85-.08,116.17,203.63,48.28,230.87,4.11c0,0,10.62-9.49,6.93-81.57,0,0,44.11-12.37,57.66-48.94,0,0-40-70.9-108.22-76.25L197.53,89"/><path class="cls-2" d="M379,156.37s-3.55,27.81-57.66,48.94l-2.13-11.82s45.43-24.26,52.81-47.82Z"/><path class="cls-1" d="M315.61,166.88s21,68.85.08,116.17-203.63,48.28-230.87,4.11c0,0-10.62-9.49-6.93-81.56,0,0-44.11-12.38-57.66-48.95,0,0,40-70.9,108.22-76.25L197.53,89"/><path class="cls-3" d="M84.82,287.16s-21.15-28-1.63-107.6c0,0-4.67,107.31,23,111.63Z"/><path class="cls-3" d="M315.61,166.88s20.93,66.55.08,116.17l-13.35,5.58s19.73-49.35,9.85-120.87Z"/><path class="cls-2" d="M20.23,156.65s3.55,27.81,57.66,48.95L80,193.77S34.59,169.51,27.21,146Z"/><path class="cls-3" d="M319.1,179.56s-6.3-26.9-11.51-34.45c0,0,4.47,15.88,6.66,42.45S319.1,179.56,319.1,179.56Z"/><path class="cls-2" d="M196.92,88.41l-25.41,28.48s-34.81-10.65-46.62-36.46A358.87,358.87,0,0,0,196.92,88.41Z"/><path class="cls-2" d="M196.92,88.41l25.4,28.48s34.82-9.5,46.62-35.31A418.78,418.78,0,0,1,196.92,88.41Z"/></g></svg>
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/purpleShirt.svg">
+                    <img class="clothing" src="media/blueHat.svg">
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/redShirt.svg">
+                    <img class="clothing" src="media/purpleSkirt.svg">
                 </div>
             </div>
             <div id="pants" class="tabcontent">
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/bluePants.svg">
+                    <img class="clothing" src="media/blueShirt.svg">
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/pinkSkirt.svg">
+                    <img class="clothing" src="media/blueTie.svg">
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/purpleSkirt.svg">
+                    <img class="clothing" src="media/purpleShirt.svg">
                 </div>
                 <div class="clothingBoxes">
                     <img class="clothing" src="media/blackPants.svg">
@@ -67,12 +59,20 @@
                     <img class="clothing" src="media/goldNecklace.svg">
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/blueTie.svg">
+                    <img class="clothing" src="media/redShirt.svg">
                 </div>
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/blueHat.svg">
+                    <img class="clothing" src="media/pinkSkirt.svg">
                 </div>
             </div>
+        </div>
+        <div id="sectionSelect">
+            <img class="sectionCircles" id="defaultOpen" src="media/icon1.svg" onclick="openTab(event, 'hats')">
+            <img class="sectionCircles" src="media/icon2.svg" onclick="openTab(event, 'shirts')">
+            <img class="sectionCircles" src="media/icon3.svg" onclick="openTab(event, 'pants')">
+        </div>
+        <div id="leftPanel">
+            <img class="character" src="media/bear.png">
         </div>
     </div>
 
@@ -142,35 +142,55 @@
         //            }
         //        }
 
+        //        var svg = d3.select("svg");
+        //        svg.selectAll("use")
+        //            .data([{
+        //                x: 0,
+        //                y: 0
+        //            }])
+        //            .enter()
+        //            .append("use")
+        //            .attr("href", "#Pink_Shirt")
+        //            .attr("x", function(d) {
+        //                return (d.x)
+        //            })
+        //            .attr("y", function(d) {
+        //                return (d.y)
+        //            })
+        //
+        //        var dragHandler = d3.drag()
+        //            .on("drag", function(d) {
+        //                d3.select(this)
+        //                    .attr("x", d3.event.x)
+        //                    .attr("y", d3.event.y);
+        //            });
+        //
+        //        function container() {
+        //            return this;
+        //        }
+        //
+        //        dragHandler(svg.selectAll("use"));
+        //        drag.container();
         var svg = d3.select("svg");
-        svg.selectAll("use")
-            .data([{
-                x: 50,
-                y: 50
-            }])
-            .enter()
-            .append("use")
-            .attr("href", "#Pink_Shirt")
-            .attr("x", function(d) {
-                return (d.x)
-            })
-            .attr("y", function(d) {
-                return (d.y)
-            })
+        svg.append("use")
+            .attr("x", 50)
+            .attr("y", 50)
+
+        var deltaX, deltaY;
 
         var dragHandler = d3.drag()
-            .on("drag", function(d) {
+            .on("start", function() {
+                var current = d3.select(this);
+                deltaX = current.attr("x") - d3.event.x;
+                deltaY = current.attr("y") - d3.event.y;
+            })
+            .on("drag", function() {
                 d3.select(this)
-                    .attr("x", d.x = d3.event.x)
-                    .attr("y", d.y = d3.event.y);
+                    .attr("x", d3.event.x + deltaX)
+                    .attr("y", d3.event.y + deltaY);
             });
 
-        function container() {
-            return this;
-        }
-
         dragHandler(svg.selectAll("use"));
-        drag.container();
     </script>
 </body>
 </html>

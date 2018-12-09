@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="wrapper" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="wrapper">
         <header>
             <h1>Dress-Up Game 1</h1>
         </header>
@@ -22,7 +22,7 @@
                 </div>
             </a>
         </div>
-        <div id="leftPanel">
+        <div id="leftPanel" ondrop="drop(event)" ondragover="allowDrop(event)">
             <img class="character" src="media/bear.png">
         </div>
         <div id="sectionSelect">
@@ -32,7 +32,7 @@
         </div>
         <div id="clothingSelect">
             <div id="shirts" class="tabcontent">
-                <div class="clothingBoxes">
+                <div class="clothingBoxes" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <img class="clothing" src="media/pinkShirt.svg" draggable="true" ondragstart="drag(event)">
                 </div>
                 <div class="clothingBoxes">
@@ -107,17 +107,17 @@
         function drop(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(wrapper));
+            ev.target.appendChild(document.getElementById(data));
         }
 
-//        function dragstart_handler(ev) {
-//            // Create an image and then use it for the drag image.
-//            // NOTE: change "example.gif" to an existing image or the image
-//            // will not be created and the default drag image will be used.
-//            var img = new Image();
-//            img.src = "media/pinkShirt.svg";
-//            ev.dataTransfer.setDragImage(img, 10, 10);
-//        }
+        //        function dragstart_handler(ev) {
+        //            // Create an image and then use it for the drag image.
+        //            // NOTE: change "example.gif" to an existing image or the image
+        //            // will not be created and the default drag image will be used.
+        //            var img = new Image();
+        //            img.src = "media/pinkShirt.svg";
+        //            ev.dataTransfer.setDragImage(img, 10, 10);
+        //        }
     </script>
 </body>
 </html>

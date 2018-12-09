@@ -8,7 +8,11 @@
     width: 90vw;
     max-width: 1200px;
     height: 90vh;
-    grid-template-areas: "header header header header header homepage" "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect" "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect" "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect" "leftPanel leftPanel leftPanel sectionSelect clothingSelect clothingSelect";
+    grid-template-areas: "header header header header header homepage"
+        "sectionSelect clothingSelect clothingSelect leftPanel leftPanel leftPanel"
+         "sectionSelect clothingSelect clothingSelect leftPanel leftPanel leftPanel"
+         "sectionSelect clothingSelect clothingSelect leftPanel leftPanel leftPanel"
+         "sectionSelect clothingSelect clothingSelect leftPanel leftPanel leftPanel";
     grid-template-rows: 130px 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -16,6 +20,7 @@
 header {
     grid-area: header;
     background-color: white;
+    position: absolute;
 }
 
 #homepage {
@@ -26,10 +31,11 @@ header {
 
 #leftPanel {
     grid-area: leftPanel;
-    background-color: lightpink;
+    background-color: lightblue;
     display: flex;
     align-content: center;
     justify-content: center;
+    z-index: -1;
 }
 
 #sectionSelect {
@@ -59,6 +65,7 @@ header {
     border-radius: 10px;
     margin: 15px;
     float: left;
+    z-index: 1;
 }
 
 
