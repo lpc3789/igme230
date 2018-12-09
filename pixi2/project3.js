@@ -1,12 +1,17 @@
 //pixi.js renderer takes up full screen and is transparent so things will render on screen properly
-var app = new PIXI.Application(800, 600, {
+var app = new PIXI.Application(1000, 600, {
     transparent: true
 });
+
+app.renderer.backgroundColor = 0x000000;
 
 app.renderer.view.style.position = "absolute";
 app.renderer.view.style.display = "block";
 app.renderer.autoResize = true;
 app.renderer.resize(window.innerWidth, window.innerHeight);
+
+var container = new PIXI.Container();
+container.interactive = true;
 
 
 // create a texture from an image path
@@ -15,12 +20,13 @@ var pinkShirt = PIXI.Texture.fromImage("shirtIcon2.png");
 var purpleShirt = PIXI.Texture.fromImage("shirtIcon3.png");
 var redShirt = PIXI.Texture.fromImage("shirtIcon4.png");
 
-
+//calls functions
 createBlueShirt(830, 275);
 createPinkShirt(830, 275);
 createPurpleShirt(830, 275);
 createRedShirt(830, 275);
 
+//functions to create shirts
 function createBlueShirt(x, y) {
 
     // create shirt
@@ -150,6 +156,7 @@ function createRedShirt(x, y) {
     app.stage.addChild(clothes);
 }
 
+//drag and drop functionality
 function onDragStart(event) {
     // store a reference to the data
     // the reason for this is because of multitouch
