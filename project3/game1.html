@@ -7,14 +7,13 @@
     <title>Constantino IGME-230 Project 3</title>
     <link rel="stylesheet" href="project3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="project3.js"></script>
+    <script src="d3.min.js"></script>
 </head>
 
 <body>
-    <script src="pixi.min.js"></script>
-    <div id="wrapper">
+    <div id="wrapper" ondrop="drop(event)" ondragover="allowDrop(event)">
         <header>
-            <h1>Dress-Up Game 1</h1>
+            <h1>Dress-Up Game 2</h1>
         </header>
         <div id="homepage">
             <a href="index.html">
@@ -27,14 +26,14 @@
             <img class="character" src="media/bear.png">
         </div>
         <div id="sectionSelect">
-            <img class="sectionCircles" src="media/hatIcon.svg">
-            <img class="sectionCircles" src="media/shirtIcon.svg">
-            <img class="sectionCircles" src="media/pantsIcon.svg">
+            <img class="sectionCircles" id="defaultOpen" src="media/hatIcon.svg" onclick="openTab(event, 'hats')">
+            <img class="sectionCircles" src="media/shirtIcon.svg" onclick="openTab(event, 'shirts')">
+            <img class="sectionCircles" src="media/pantsIcon.svg" onclick="openTab(event, 'pants')">
         </div>
         <div id="clothingSelect">
             <div id="shirts" class="tabcontent">
                 <div class="clothingBoxes">
-                    <img class="clothing" src="media/pinkShirt.svg">
+                    <img class="clothing" src="media/pinkShirt.svg" draggable="true" ondragstart="drag(event)">
                 </div>
                 <div class="clothingBoxes">
                     <img class="clothing" src="media/blueShirt.svg">
@@ -46,8 +45,79 @@
                     <img class="clothing" src="media/redShirt.svg">
                 </div>
             </div>
+            <div id="pants" class="tabcontent">
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/bluePants.svg">
+                </div>
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/pinkSkirt.svg">
+                </div>
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/purpleSkirt.svg">
+                </div>
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/blackPants.svg">
+                </div>
+            </div>
+            <div id="hats" class="tabcontent">
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/pinkBow.svg">
+                </div>
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/goldNecklace.svg">
+                </div>
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/blueTie.svg">
+                </div>
+                <div class="clothingBoxes">
+                    <img class="clothing" src="media/blueHat.svg">
+                </div>
+            </div>
         </div>
-
     </div>
+
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        //switches between tabs
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        //        //uses nested functions to make the clothing elements draggable
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(wrapper));
+        }
+
+//        function dragstart_handler(ev) {
+//            // Create an image and then use it for the drag image.
+//            // NOTE: change "example.gif" to an existing image or the image
+//            // will not be created and the default drag image will be used.
+//            var img = new Image();
+//            img.src = "media/pinkShirt.svg";
+//            ev.dataTransfer.setDragImage(img, 10, 10);
+//        }
+    </script>
 </body>
 </html>
