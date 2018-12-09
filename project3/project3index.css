@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: sans-serif;
+    margin-top: 75px;
+    text-align: center;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+ul {
+    font-family: sans-serif;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a.sources {
+    text-align: left;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: deepskyblue;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+img {
+    width: 600px;
+    height: auto;
+}
+
+body {
+    width: 650px;
+    margin: auto;
+}
+
+@media (max-width: 750px) {
+    /*mobile media query*/
+    body {
+        width: 350px;
+        margin: auto;
+    }
+    img {
+        width: 350px;
+        height: auto;
+    }
+}
