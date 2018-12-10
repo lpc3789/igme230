@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* establishes desktop view grid. 2 rows and 2 columns */
 #wrapper {
     display: grid;
     margin: auto;
@@ -13,21 +14,23 @@
     grid-template-columns: 1fr 1fr;
 }
 
+/* each section of the grid is given a grid-area to define it and a background color */
 header {
     grid-area: header;
     background-color: white;
 }
 
+/* this div uses flexbox to center the content within */
 #homepage {
     grid-area: homepage;
     background-color: white;
     display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    padding-top: 60px;
-    position: relative;
+    justify-content: center;
+    align-content: center;
+    padding-top: 40px;
 }
 
+/* this div uses flexbox to center the content within */
 #bottomPanel {
     grid-area: bottomPanel;
     background-color: #ffcccc;
@@ -36,16 +39,19 @@ header {
     align-content: center;
 }
 
+/* the character images are given a height and width */
 .character {
     height: 500px;
     width: auto;
 }
 
+/* sets the font-family as sans-serif and gives it a top margin */
 h1 {
     margin-top: 40px;
     font-family: sans-serif;
 }
 
+/* links are given right alignment, color, and font-size. I also took away the text-decoration so it was not underlined. The absolute positioning and z-index put the link on the top of the screen so it is clickable */
 a {
     text-align: right;
     color: #ff8080;
@@ -56,6 +62,59 @@ a {
     z-index: 1;
 }
 
-@media (max-width: 568px) {
-    #wrapper {}
+/* paragraph text is hidden in desktop view */
+p {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    /*mobile media query*/
+    /* sets grid used for mobile version of project. 3 rows and 1 column */
+    #wrapper {
+        width: 100vw;
+        grid-template-areas: "header" "homepage" "bottomPanel";
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 100px 300px;
+    }
+    /* each section of grid is given grid-row */
+    header {
+        grid-row: 1;
+    }
+    /* this div uses flexbox to center the content within */
+    #homepage {
+        grid-row: 2;
+        justify-content: center;
+        align-content: center;
+        padding-top: 30px;
+    }
+    #bottomPanel {
+        grid-row: 3;
+    }
+    /* text is given size and centered */
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    /* text is given relative position and centered */
+    a {
+        position: relative;
+        text-align: center;
+    }
+    /* paragraph text is displayed in mobile version and given margins */
+    p {
+        display: block;
+        font-family: sans-serif;
+        margin-left: 45px;
+        margin-right: 45px;
+        margin-top: 45px;
+    }
+    /* body elements are centered */
+    body {
+        margin: auto;
+    }
+    /* images are hidden */
+    img {
+        display: none;
+
+    }
 }

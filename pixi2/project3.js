@@ -3,16 +3,12 @@ var app = new PIXI.Application(1000, 600, {
     transparent: true
 });
 
+//makes renderer background color black, and resizes it so it takes up the full width and height of the window
 app.renderer.backgroundColor = 0x000000;
-
 app.renderer.view.style.position = "absolute";
 app.renderer.view.style.display = "block";
 app.renderer.autoResize = true;
 app.renderer.resize(window.innerWidth, window.innerHeight);
-
-var container = new PIXI.Container();
-container.interactive = true;
-
 
 // create a texture from an image path
 var blueShirt = PIXI.Texture.fromImage("blueShirt.png");
@@ -154,6 +150,7 @@ function createRedShirt(x, y) {
 }
 
 //drag and drop functionality
+//lowers opacity of object to show it is being interacted with and states that dragging is currently true
 function onDragStart(event) {
     // store a reference to the data
     // the reason for this is because of multitouch
@@ -163,6 +160,7 @@ function onDragStart(event) {
     this.dragging = true;
 }
 
+//stops moving the object, raises opacity of object back to normal
 function onDragEnd() {
     this.alpha = 1;
     this.dragging = false;
@@ -170,6 +168,7 @@ function onDragEnd() {
     this.data = null;
 }
 
+//moves object while keeping track of new x and y positions
 function onDragMove() {
     if (this.dragging) {
         var newPosition = this.data.getLocalPosition(this.parent);

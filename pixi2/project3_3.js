@@ -21,16 +21,26 @@ var pinkSkirt = PIXI.Texture.fromImage("pinkSkirt.png");
 var purpleSkirt = PIXI.Texture.fromImage("purpleSkirt.png");
 var blackPants = PIXI.Texture.fromImage("blackPants.png");
 
+var blueTie = PIXI.Texture.fromImage("blueTie.png");
+var pinkBow = PIXI.Texture.fromImage("pinkBow.png");
+var blueHat = PIXI.Texture.fromImage("blueHat.png");
+var goldNecklace = PIXI.Texture.fromImage("goldNecklace.png");
+
 //calls functions
-createBlueShirt(1100, 275);
-createPinkShirt(380, 235);
-createPurpleShirt(1050, 475);
+createBlueShirt(1200, 275);
+createPinkShirt(280, 175);
+createPurpleShirt(1190, 475);
 createRedShirt(280, 485);
 
-createBluePants(350, 375);
-createPinkSkirt(1080, 375);
-createPurpleSkirt(1100, 575);
-createBlackPants(420, 575);
+createBluePants(250, 365);
+createPinkSkirt(1180, 375);
+createPurpleSkirt(1200, 575);
+createBlackPants(280, 620);
+
+createBlueTie(400, 630);
+createPinkBow(1200, 175);
+createBlueHat(1100, 645);
+createGoldNecklace(250, 275);
 
 //functions to create shirts
 function createBlueShirt(x, y) {
@@ -257,6 +267,132 @@ function createBlackPants(x, y) {
 
     // create shirt
     var clothes = new PIXI.Sprite(blackPants);
+
+    // enable the clothes to be interactive
+    clothes.interactive = true;
+
+    // hand-cursor appears on rollover
+    clothes.buttonMode = true;
+
+    // center the clothes anchor point
+    clothes.anchor.set(0.5);
+
+    // scale it to size
+    clothes.scale.set(.45);
+
+    // the pointer events
+    clothes
+        .on('pointerdown', onDragStart)
+        .on('pointerup', onDragEnd)
+        .on('pointerupoutside', onDragEnd)
+        .on('pointermove', onDragMove);
+
+    // moves the sprite to its new position
+    clothes.x = x;
+    clothes.y = y;
+
+    // adds sprite to the stage
+    app.stage.addChild(clothes);
+}
+
+//functions to create accessories
+function createBlueTie(x, y) {
+
+    // create shirt
+    var clothes = new PIXI.Sprite(blueTie);
+
+    // enable the clothes to be interactive
+    clothes.interactive = true;
+
+    // hand-cursor appears on rollover
+    clothes.buttonMode = true;
+
+    // center the clothes anchor point
+    clothes.anchor.set(0.5);
+
+    // scale it to size
+    clothes.scale.set(.45);
+
+    // the pointer events
+    clothes
+        .on('pointerdown', onDragStart)
+        .on('pointerup', onDragEnd)
+        .on('pointerupoutside', onDragEnd)
+        .on('pointermove', onDragMove);
+
+    // moves the sprite to its new position
+    clothes.x = x;
+    clothes.y = y;
+
+    // adds sprite to the stage
+    app.stage.addChild(clothes);
+}
+function createPinkBow(x, y) {
+
+    // create shirt
+    var clothes = new PIXI.Sprite(pinkBow);
+
+    // enable the clothes to be interactive
+    clothes.interactive = true;
+
+    // hand-cursor appears on rollover
+    clothes.buttonMode = true;
+
+    // center the clothes anchor point
+    clothes.anchor.set(0.5);
+
+    // scale it to size
+    clothes.scale.set(.45);
+
+    // the pointer events
+    clothes
+        .on('pointerdown', onDragStart)
+        .on('pointerup', onDragEnd)
+        .on('pointerupoutside', onDragEnd)
+        .on('pointermove', onDragMove);
+
+    // moves the sprite to its new position
+    clothes.x = x;
+    clothes.y = y;
+
+    // adds sprite to the stage
+    app.stage.addChild(clothes);
+}
+function createBlueHat(x, y) {
+
+    // create shirt
+    var clothes = new PIXI.Sprite(blueHat);
+
+    // enable the clothes to be interactive
+    clothes.interactive = true;
+
+    // hand-cursor appears on rollover
+    clothes.buttonMode = true;
+
+    // center the clothes anchor point
+    clothes.anchor.set(0.5);
+
+    // scale it to size
+    clothes.scale.set(.45);
+
+    // the pointer events
+    clothes
+        .on('pointerdown', onDragStart)
+        .on('pointerup', onDragEnd)
+        .on('pointerupoutside', onDragEnd)
+        .on('pointermove', onDragMove);
+
+    // moves the sprite to its new position
+    clothes.x = x;
+    clothes.y = y;
+
+    // adds sprite to the stage
+    app.stage.addChild(clothes);
+}
+function createGoldNecklace(x, y) {
+
+    // create shirt
+    var clothes = new PIXI.Sprite(goldNecklace);
 
     // enable the clothes to be interactive
     clothes.interactive = true;
